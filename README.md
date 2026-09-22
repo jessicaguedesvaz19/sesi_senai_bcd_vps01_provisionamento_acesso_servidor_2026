@@ -1,1 +1,4 @@
-# sesi_senai_bcd_vps01_provisionamento_acesso_servidor_2026
+# VPF 01 - Banco de Dados
+## Desafio: Projeto Prisionamento de acesso a servidores 
+
+![MER/DER](MER/DER_conceitual_logico.png)
