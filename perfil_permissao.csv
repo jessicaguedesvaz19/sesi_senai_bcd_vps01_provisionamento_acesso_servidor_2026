@@ -1,0 +1,4 @@
+id_perfil,nome,descricao,nivel_acesso
+1,Leitura,Permissao somente para visualizar informacoes,1
+2,Operador,Permissao para executar operacoes,2
+3,Administrador,Acesso administrativo ao servidor,3

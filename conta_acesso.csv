@@ -1,0 +1,4 @@
+id_conta,id_usuario,id_servidor,login,status,data_criacao,data_expiracao
+1,1,1,joao.silva,ATIVO,2026-09-22,2027-09-22
+2,2,2,camila.rodrigues,ATIVO,2026-09-22,2027-09-22
+3,3,1,henrique.costa,ATIVO,2026-09-22,2027-09-22

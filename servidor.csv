@@ -1,0 +1,4 @@
+id,nome,hostname,ip,sistema_operacional,ambiente
+1,Servidor Web,WEB01,192.168.1.10,Linux,Producao
+2,Servidor Banco,DB01,192.168.1.20,Linux,Producao
+3,Servidor Teste,TEST01,192.168.1.30,Windows Server,Testes

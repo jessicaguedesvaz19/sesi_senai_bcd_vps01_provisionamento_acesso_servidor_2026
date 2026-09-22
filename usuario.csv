@@ -1,0 +1,4 @@
+id,nome,email,cargo,departamento,status
+1,João Silva,joao@email.com,Desenvolvedor,TI,ATIVO
+2,Camila Rodrigues,camila@email.com,Analista,TI,ATIVO
+3,Henrique Costa,henrique@email.com,Administrador,Infraestrutura,ATIVO

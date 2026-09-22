@@ -1,0 +1,4 @@
+id_acesso,id_conta,id_perfil,data_inicio,data_fim,status
+1,1,1,2026-09-22,2027-09-22,ATIVO
+2,2,2,2026-09-22,2027-09-22,ATIVO
+3,3,3,2026-09-22,2027-09-22,ATIVO
