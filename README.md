@@ -1,13 +1,45 @@
 # VPF 01 - Banco de Dados
-## Desafio: Projeto Prisionamento de acesso a servidores
+## Desafio: Projeto Provisionamento de acesso a servidores
 
 Um banco de dados de Gestão e Provisionamento de Acessos de TI a servidores. O sistema tem como objetivo controlar os usuários, servidores, contas de acesso e permissões, permitindo registrar quais usuários possuem acesso a determinados servidores e quais níveis de permissão foram concedidos.
-
+##
 ## MER/DER Conceitual e Lógico
 
 ![MER/DER](./MER_DER_conceitual_logico.png)
 
 ## Dicionário de Dados
+
+| Entidade            | Atributo            | Tipo    | Tamanho | Descrição                                                                 |
+| ------------------- | ------------------- | ------- | ------: | ------------------------------------------------------------------------- |
+| Usuário             | id                  | int     |       — | Identificador único do usuário                                            |
+| Usuário             | nome                | varchar |     100 | Nome completo do usuário                                                  |
+| Usuário             | email               | varchar |     100 | E-mail do usuário                                                         |
+| Usuário             | cargo               | varchar |     100 | Cargo do usuário                                                          |
+| Usuário             | departamento        | varchar |     100 | Departamento do usuário                                                   |
+| Usuário             | status              | varchar |      20 | Situação do usuário                                                       |
+| Servidor            | id                  | int     |       — | Identificador único do servidor                                           |
+| Servidor            | nome                | varchar |     100 | Nome do servidor                                                          |
+| Servidor            | hostname            | varchar |     100 | Nome de identificação do servidor na rede                                 |
+| Servidor            | ip                  | varchar |      45 | Endereço IP do servidor                                                   |
+| Servidor            | sistema_operacional | varchar |      50 | Sistema operacional utilizado pelo servidor                               |
+| Servidor            | ambiente            | varchar |      20 | Ambiente em que o servidor está, como Desenvolvimento, Testes ou Produção |
+| Conta de Acesso     | id_conta            | int     |       — | Identificador único da conta                                              |
+| Conta de Acesso     | id_usuario          | int     |       — | Identifica o usuário relacionado à conta                                  |
+| Conta de Acesso     | id_servidor         | int     |       — | Identifica o servidor relacionado à conta                                 |
+| Conta de Acesso     | login               | varchar |      50 | Login utilizado para acessar o servidor                                   |
+| Conta de Acesso     | status              | varchar |      20 | Situação da conta de acesso                                               |
+| Conta de Acesso     | data_criacao        | Date    |       — | Data em que a conta foi criada                                            |
+| Conta de Acesso     | data_expiracao      | Date    |       — | Data em que a conta deixará de ser válida                                 |
+| Perfil de Permissão | id_perfil           | int     |       — | Identificador único do perfil                                             |
+| Perfil de Permissão | nome                | varchar |      50 | Nome do perfil de permissão                                               |
+| Perfil de Permissão | descricao           | varchar |     255 | Descrição das permissões do perfil                                        |
+| Perfil de Permissão | nivel_acesso        | int     |       — | Nível de acesso do perfil                                                 |
+| Acesso              | id_acesso           | int     |       — | Identificador único do acesso                                             |
+| Acesso              | id_conta            | int     |       — | Identifica a conta que recebeu o acesso                                   |
+| Acesso              | id_perfil           | int     |       — | Identifica o perfil de permissão concedido                                |
+| Acesso              | data_inicio         | Date    |       — | Data em que o acesso começa                                               |
+| Acesso              | data_fim            | Date    |       — | Data em que o acesso termina                                              |
+| Acesso              | status              | varchar |      20 | Situação do acesso                                                        |
 
 ## Dados de Teste em CSV
 
@@ -19,7 +51,7 @@ Um banco de dados de Gestão e Provisionamento de Acessos de TI a servidores. O 
 
 ## Script SQL DDL (Desenvolvimento: Criação do Banco de dados)
 
-```
+```sql
 create database provisionamento_acessos;
 
 use provisionamento_acessos;
@@ -77,7 +109,7 @@ create table acesso (
 
 ## Script SQL DML(Manipulação: População com dados de teste)
 
-```
+```sql
 insert into usuario
 (nome, email, cargo, departamento, status)
 values
